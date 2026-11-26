@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Beauty Academy Certificates</title><link rel="stylesheet" href="style.css"></head>
+<body><header><h1 id="academy">Santosh Beauty Parlour</h1><p>Owner: Santosh Kashyap · Student Certificates & Verification</p><p>Village Abdullapur, Karnal, Haryana 132001 · 9416958211</p></header>
+<nav><button data-view="home">Home</button><button data-view="students">Certified Students</button><button data-view="verify">Verify Certificate</button><button data-view="admin">Admin</button></nav>
+<main>
+<section id="home" class="view"><h2>Welcome</h2><p>Welcome to our academy's certificate verification portal.</p><button onclick="show('students')">View Certified Students</button></section>
+<section id="students" class="view hidden"><h2>Certified Students</h2><div id="studentList">Loading…</div></section>
+<section id="verify" class="view hidden"><h2>Verify Certificate</h2><label>Certificate ID <input id="verifyId" placeholder="e.g. BSA-2026-001"></label><button id="verifyBtn">Verify</button><div id="verifyResult"></div></section>
+<section id="admin" class="view hidden"><h2>Admin</h2><div id="authBox"><p>Admin login (create your admin account in Firebase Authentication first)</p><input id="email" type="email" placeholder="Admin email"><input id="password" type="password" placeholder="Password"><button id="login">Login</button><button id="logout" class="hidden">Logout</button><p id="authMsg"></p></div>
+<div id="adminPanel" class="hidden"><h3>Add / Issue certificate</h3><form id="studentForm"><input id="name" required placeholder="Student full name"><input id="course" required placeholder="Course name"><input id="date" type="date" required><input id="photo" placeholder="Photo URL (optional)"><input id="certId" required placeholder="Unique certificate ID e.g. BSA-2026-001"><textarea id="notes" placeholder="Optional note"></textarea><label><input id="publish" type="checkbox" checked> Publish on Certified Students page</label><button type="submit">Save Certificate</button></form><p id="saveMsg"></p><h3>Manage records</h3><div id="adminList"></div></div></section>
+</main><footer>Certificates are issued by the academy. Verify using the Certificate ID.</footer>
+<script type="module" src="app.js"></script></body></html>
