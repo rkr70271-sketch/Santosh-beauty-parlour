@@ -1,1 +1,189 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#fff8f5;color:#33231e}header{text-align:center;background:#6d3c4a;color:white;padding:30px 16px}header h1{margin:0}nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:14px;background:#f2dfd9}button{border:0;border-radius:8px;padding:10px 15px;background:#6d3c4a;color:white;cursor:pointer;margin:4px}button:hover{opacity:.9}main{max-width:900px;margin:24px auto;padding:0 16px}.view{background:white;border:1px solid #ead9d2;border-radius:14px;padding:22px;margin-bottom:18px}.hidden{display:none}input,textarea{display:block;width:100%;max-width:520px;padding:10px;margin:9px 0;border:1px solid #d8c6be;border-radius:7px}input[type=checkbox]{display:inline;width:auto}label{display:block;margin:10px 0}.student{border:1px solid #eee;padding:14px;border-radius:10px;margin:12px 0}.student img{max-width:100px;border-radius:8px}footer{text-align:center;padding:20px;color:#795b52}small{color:#666}.certificate{border:8px double #a77c68;padding:24px;text-align:center;margin:14px 0}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #fbf7f0;
+  --white: #ffffff;
+  --rose: #b77b78;
+  --rose-dark: #8f5758;
+  --gold: #c4a36a;
+  --brown: #44332e;
+  --muted: #806e65;
+  --border: #eadfd4;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Arial", sans-serif;
+  background: var(--cream);
+  color: var(--brown);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #fffaf3, #f1e3d8);
+  color: var(--brown);
+  padding: 48px 16px;
+  border-bottom: 2px solid var(--gold);
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(27px, 5vw, 42px);
+  letter-spacing: 1px;
+}
+
+header p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+button {
+  border: 1px solid var(--rose);
+  border-radius: 30px;
+  padding: 11px 20px;
+  background: var(--rose);
+  color: white;
+  cursor: pointer;
+  margin: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--rose-dark);
+  transform: translateY(-1px);
+}
+
+main {
+  max-width: 1050px;
+  margin: 35px auto;
+  padding: 0 18px;
+}
+
+.view {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 25px rgba(91, 65, 48, 0.06);
+}
+
+.view h2,
+.view h3 {
+  color: var(--rose-dark);
+}
+
+.hidden {
+  display: none !important;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fffdf9;
+  color: var(--brown);
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(196, 163, 106, 0.15);
+}
+
+input[type="checkbox"] {
+  display: inline;
+  width: auto;
+}
+
+label {
+  display: block;
+  margin: 12px 0;
+  color: var(--brown);
+}
+
+.student {
+  border: 1px solid var(--border);
+  background: #fffdf9;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 14px 0;
+  box-shadow: 0 4px 14px rgba(91, 65, 48, 0.04);
+}
+
+.student img {
+  max-width: 110px;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 28px 16px;
+  background: #f1e5dc;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+small {
+  color: var(--muted);
+}
+
+.certificate {
+  border: 7px double var(--gold);
+  background: #fffdf8;
+  padding: 30px 20px;
+  text-align: center;
+  margin: 18px 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 34px 14px;
+  }
+
+  nav {
+    gap: 5px;
+    padding: 10px;
+  }
+
+  nav button {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .view {
+    padding: 18px;
+  }
+
+  .certificate {
+    padding: 18px 12px;
+  }
+}
